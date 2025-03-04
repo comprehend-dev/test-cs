@@ -1,0 +1,67 @@
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# Ignore NuGet dependencies
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.assets.json
+
+# Ignore Rider and VS Code settings
+.idea/
+.vscode/
+
+# Ignore Visual Studio files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Ignore build artifacts
+*.dll
+*.exe
+*.pdb
+*.appx
+*.appxbundle
+*.msix
+*.msixbundle
+*.zip
+*.tar.gz
+*.log
+
+# Ignore test results
+TestResults/
+.trx
+*.coverage
+.coverage/
+*.coverlet/
+
+# Ignore Resharper files
+_ReSharper*/
+*.DotSettings.user
+
+# Ignore dotnet tool artifacts
+.dotnet_tools/
+.dotnet_watch.log
+.env
+
+# Ignore global.json if it's machine-specific
+global.json
+
+# Ignore Secrets and local settings
+secrets.json
+appsettings.Development.json
+appsettings.Local.json
+appsettings.Test.json
+
+# Ignore Rider workspace
+.idea/
+
+# Ignore temporary files
+*~ 
+*.bak
+*.tmp
