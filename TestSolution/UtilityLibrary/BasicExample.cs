@@ -2,13 +2,15 @@
 
 namespace BasicExample
 {
+    /* Test multi-line comment. */
     public class BaseClass
     {
-        protected int baseValue = 42;
+        protected int baseValue = 42; // Test comment
 
         public virtual void Display() => Console.WriteLine("BaseClass Display");
     }
 
+    // Test single line comment
     public class MyClass : BaseClass
     {
         private int _field;
