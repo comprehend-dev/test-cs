@@ -104,3 +104,12 @@ public class DerivedClass : ExampleClass
         Console.WriteLine(ProtectedMessage); // Accessible because it's `protected`
     }
 }
+
+// Example of event declarations
+public class EventsExample
+{
+    public event Action PublicEvent;
+    private event EventHandler PrivateEvent;
+    protected static event Func<int, string> StaticProtectedEvent;
+    internal readonly event Action InternalReadonlyEvent;
+}
