@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 // `file` class (C# 11+) - This class is restricted to this file only.
 file class FileScopedClass
@@ -112,4 +113,50 @@ public class EventsExample
     private event EventHandler PrivateEvent;
     protected static event Func<int, string> StaticProtectedEvent;
     internal readonly event Action InternalReadonlyEvent;
+}
+
+public abstract class Animal
+{
+    // Abstract method - must be overridden by derived classes
+    public abstract void Speak();
+
+    // Virtual method - can be optionally overridden
+    public virtual void Eat()
+    {
+        Console.WriteLine("The animal is eating.");
+    }
+
+    // Static method - belongs to the class itself
+    public static void Describe()
+    {
+        Console.WriteLine("Animals are living creatures.");
+    }
+
+    // Async method - for asynchronous behavior
+    public async Task SleepAsync()
+    {
+        Console.WriteLine("Animal is falling asleep...");
+        await Task.Delay(500);
+        Console.WriteLine("Animal is now asleep.");
+    }
+
+    // Protected method - accessible in derived classes
+    protected void Breathe()
+    {
+        Console.WriteLine("The animal breathes.");
+    }
+
+    // Private method - internal helper
+    private void Digest()
+    {
+        Console.WriteLine("The animal digests food.");
+    }
+
+    // Unsafe method - for low-level operations (not common, but valid)
+    protected unsafe void DoUnsafeStuff()
+    {
+        int x = 10;
+        int* p = &x;
+        Console.WriteLine($"Pointer value: {*p}");
+    }
 }
