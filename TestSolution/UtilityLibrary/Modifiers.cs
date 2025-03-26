@@ -160,3 +160,41 @@ public abstract class Animal
         Console.WriteLine($"Pointer value: {*p}");
     }
 }
+
+public class PropertyExample
+{
+    // Public auto-property with get/set
+    public string Name { get; set; }
+
+    // Auto-property with init-only setter (C# 9+)
+    public string Email { get; init; }
+
+    // Required auto-property (C# 11+)
+    public required int Age { get; init; }
+
+    // Auto-property with private setter
+    public int Id { get; private set; }
+
+    // Auto-property with protected setter
+    public int Score { get; protected set; }
+
+    // Static auto-property
+    public static int InstanceCount { get; set; }
+
+    // Read-only calculated property (custom getter only)
+    public int DoubleScore
+    {
+        get { return Score * 2; }
+    }
+
+    // Virtual property with custom get/set
+    public virtual bool IsActive
+    {
+        get => _isActive;
+        set => _isActive = value;
+    }
+    private bool _isActive;
+
+    // Abstract property (must be implemented by derived classes)
+    public abstract string AbstractData { get; set; }
+}
