@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    // canary: merge fix deployment check 2026-08-17
     [SerializeField] private float patrolSpeed = 2.0f;
     [SerializeField] private float chaseSpeed = 4.0f;
     [SerializeField] private float detectionRange = 5.0f;
